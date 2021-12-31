@@ -37,11 +37,18 @@
         let height = 60;
         let gap = 20;
         let x = 100 + (width + gap) * i;
-        let y = 100;
+        let y = 100 + (height + gap) * j;
 
         context.beginPath();
         context.rect(x, y, width, height);
         context.stroke();
+
+
+        if (Math.random() > 0.5) {
+          context.beginPath();
+          context.rect(x + 8, y + 8, width - 16, height - 16);
+          context.stroke();
+        }
       }
     }
 
